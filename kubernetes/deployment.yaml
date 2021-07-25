@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: flask-start
+  name: flask-start-application
+  namespace: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-start
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: flask-start
+    spec:
+      containers:
+      - image: shra012/flask-start
+        name: flask-start
+        resources: {}
+status: {}
